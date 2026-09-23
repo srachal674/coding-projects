@@ -41,3 +41,14 @@ git worktree add --detach ../coding-projects-before-consolidation preserved/codi
 ```
 
 The original local folders were not modified by this consolidation. Open a current clone of `coding-projects` using its workspace file for future work.
+
+## Clearer names for historical repositories
+
+The original repositories were renamed for clarity after consolidation. They remain archived, their branch commits are unchanged, and their old GitHub addresses redirect to the new names. The working folders in `coding-projects` and the preservation tags above keep their existing names.
+
+| Original name | Current repository name |
+| --- | --- |
+| `art` | [turtle-art](https://github.com/srachal674/turtle-art) |
+| `generative_spiral_system` | [generative-spiral-art](https://github.com/srachal674/generative-spiral-art) |
+| `circular_generative_graphic` | [circular-turtle-art](https://github.com/srachal674/circular-turtle-art) |
+| `landing_page_kit` | [bootstrap-landing-page-kit](https://github.com/srachal674/bootstrap-landing-page-kit) |
