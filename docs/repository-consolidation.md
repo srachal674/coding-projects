@@ -19,7 +19,7 @@ These tags are in `srachal674/coding-projects` and retain the original commits a
 
 The previous `coding-projects` main commit, `8162d3c2dffc2567fa9ee0905359032900e62596`, is retained at `preserved/coding-projects/main-2026-09-23`. It preserves the earlier uploaded Turtle version, build output, macOS metadata, and the portfolio snapshot removed from the working tree. No history was rewritten.
 
-The old small repositories are historical copies. Make new changes in the working folders above.
+The four old small repositories are archived historical copies, each with a README link to its working folder above. No repositories were deleted. Make new changes in `coding-projects`.
 
 ## Portfolio remains independent
 
