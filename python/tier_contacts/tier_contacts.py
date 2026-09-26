@@ -2,7 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 
 def open_roster():
-    print("Opening Student Roster")
+    roster_window = tk.Toplevel(root)
+
+    roster_window.title("Student Roster")
+    roster_window.geometry("800x500")
     
 root = tk.Tk()
 root.title("Tier Contacts")
