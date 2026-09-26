@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 
+def open_roster():
+    print("Opening Student Roster")
+    
 root = tk.Tk()
 root.title("Tier Contacts")
 root.geometry("900x600")
@@ -18,6 +21,7 @@ menu_frame.pack(pady=20)
 roster_button = ttk.Button(
     menu_frame,
     text="Student Roster"
+    command=open_roster
 )
 roster_button.pack(pady=10)
 
