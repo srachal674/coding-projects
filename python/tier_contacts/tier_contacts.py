@@ -29,7 +29,7 @@ def open_roster():
 
     import_button = ttk.Button(
         roster_frame,
-        text="Import Roster"
+        text="Import Roster",
         command=import_roster
     )
     import_button.pack(pady=10)
