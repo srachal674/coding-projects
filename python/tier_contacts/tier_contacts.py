@@ -16,6 +16,12 @@ def open_roster():
     roster_frame = ttk.Frame(roster_window)
     roster_frame.pack(padx=20, pady=10, fill="both", expand=True)
 
+    import_button -= ttk.BUtton(
+        roster_frame,
+        text="Import Roster"
+    )
+    import_button.pack(pady=10)
+
 root = tk.Tk()
 root.title("Tier Contacts")
 root.geometry("900x600")
