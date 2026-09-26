@@ -20,8 +20,8 @@ menu_frame.pack(pady=20)
 
 roster_button = ttk.Button(
     menu_frame,
-    text="Student Roster"
-    command=open_roster,
+    text="Student Roster",
+    command=open_roster
 )
 roster_button.pack(pady=10)
 
