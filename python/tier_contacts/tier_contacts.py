@@ -9,7 +9,7 @@ root.geometry("900x600")
 title_lable = ttk.Label(
     root,
     text="Tier Contacts",
-    font=("Arial", 24. "bold")
+    font=("Arial", 24, "bold")
 )
 
 title_lable.pack(pady=30)
