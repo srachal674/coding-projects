@@ -14,8 +14,8 @@ def open_roster():
 
     roster_title.pack(pady=20)
     roster_frame = ttk.Frame(roster_window)
-    roster_frame.pack(padx=20. pady=10, fill="both", expand=True)
-    
+    roster_frame.pack(padx=20, pady=10, fill="both", expand=True)
+
 root = tk.Tk()
 root.title("Tier Contacts")
 root.geometry("900x600")
