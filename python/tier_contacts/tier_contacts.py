@@ -14,5 +14,23 @@ title_lable = ttk.Label(
 
 title_lable.pack(pady=30)
 
-root.mainloop()
+menu_frame = ttk.Frame(root)
 
+menu_frame.pack(pady=20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root.mainloop()
