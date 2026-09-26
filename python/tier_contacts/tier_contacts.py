@@ -6,7 +6,7 @@ def open_roster():
 
     roster_window.title("Student Roster")
     roster_window.geometry("800x500")
-    roster_title = ttk.Lable(
+    roster_title = ttk.Label(
         roster_window,
         text="Student Roster",
         font=("Arial", 20, "bold")
@@ -16,7 +16,7 @@ def open_roster():
     roster_frame = ttk.Frame(roster_window)
     roster_frame.pack(padx=20, pady=10, fill="both", expand=True)
 
-    import_button -= ttk.BUtton(
+    import_button -= ttk.Button(
         roster_frame,
         text="Import Roster"
     )
@@ -26,12 +26,12 @@ root = tk.Tk()
 root.title("Tier Contacts")
 root.geometry("900x600")
 
-title_lable = ttk.Label(
+title_label = ttk.Label(
     root,
     text="Tier Contacts",
     font=("Arial", 24, "bold")
 )
-title_lable.pack(pady=30)
+title_label.pack(pady=30)
 
 menu_frame = ttk.Frame(root)
 menu_frame.pack(pady=20)
