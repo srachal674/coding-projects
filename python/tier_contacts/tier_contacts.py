@@ -6,6 +6,15 @@ def open_roster():
 
     roster_window.title("Student Roster")
     roster_window.geometry("800x500")
+    roster_title = ttk.Lable(
+        roster_window,
+        text="Student Roster",
+        font=("Arial", 20, "bold")
+    )
+
+    roster_title.pack(pady=20)
+    roster_frame = ttk.Frame(roster_window)
+    roster_frame.pack(padx=20. pady=10, fill="both", expand=True)
     
 root = tk.Tk()
 root.title("Tier Contacts")
