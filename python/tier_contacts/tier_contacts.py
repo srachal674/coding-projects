@@ -86,6 +86,9 @@ def import_roster():
                     }
                 students[student_id]["courses"].append(course)
 
+            connection = sqlite3.connect("tier_contacts.db")
+            cursor = connection.cursor()
+
             print("Roster rows:", worksheet.max_row - 1)
             print("Unique students:", len(students))
             
