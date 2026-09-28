@@ -52,8 +52,17 @@ def import_roster():
                 grade = row[column_map["Grade"]]
                 phone = row[column_map["Phone"]]
                 course = row[column_map["Course"]]
-                
 
+                if student_id not in students:
+                    students[student_id] = {
+                        "id": student_id,
+                        "name": name,
+                        "grade": grade,
+                        "phone": phone,
+                        "courses": []
+                    }
+                students[student_id]["courses"].append(course)
+            
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
 
