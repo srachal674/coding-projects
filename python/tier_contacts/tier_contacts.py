@@ -39,7 +39,17 @@ def import_roster():
             first_student = list(worksheet.iter_rows(min_row=2, values_only=True))[0]
             print("First student:", first_student)
 
-        
+            student = {
+                "id": first_student[0],
+                "name": first_student[1],
+                "grade": first_student[2],
+                "phone": first_student[3],
+                "course": first_student[4] 
+            }
+
+            print("Student name:", student["name"])
+            print("Student course:", student["course"])
+                   
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
 
