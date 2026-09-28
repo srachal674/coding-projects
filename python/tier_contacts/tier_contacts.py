@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, filedialog
+import openpyxl
 
 def import_roster():
     file_path = filedialog.askeopenfilename(
