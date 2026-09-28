@@ -3,10 +3,13 @@ from tkinter import ttk, filedialog, messagebox
 import openpyxl
 import sqlite3
 
+# DATABASE SETUP
+# Creates the SQLite tables used to store students and their course enrollments.
 def setup_database():
     connection = sqlite3.connect("tier_contacts.db")
     cursor = connection.cursor()
 
+    # Store one record per student. Student ID is the unique key.
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS students (
             student_id TEXT PRIMARY KEY, 
@@ -16,6 +19,7 @@ def setup_database():
         )
     """)
 
+    # Store each student's course enrollments separately so one student can have multiple courses.
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS enrollments (
             student_id TEXT NOT NULL,
@@ -28,7 +32,8 @@ def setup_database():
     connection.commit()
     connection.close()
 
-#This prompts user to import their roster
+# ROSTER IMPORT
+# Prompts the user to select a PowerSchool roster spreadsheet and imports its data.
 def import_roster():
     file_path = filedialog.askopenfilename(
         title="Select PowerSchool Roster",
@@ -38,12 +43,15 @@ def import_roster():
         ]
     )
 
+    # Only continue if the user selected a file.
     if file_path:
+        # Open the selected Excel workbook and use its active worksheet.
         workbook = openpyxl.load_workbook(file_path)
         print("Workbook opened successfully!")
         print("Worksheets:", workbook.sheetnames)
         worksheet = workbook.active
 
+        # Read the spreadsheet headers so columns can be found by name instead of fixed position.
         headers = [cell.value for cell in worksheet[1]]
         required_headers = ['Id', 'Name', 'Grade', 'Phone', 'Course']
         missing_headers = []
@@ -52,7 +60,7 @@ def import_roster():
             if header not in headers:
                 missing_headers.append(header)
 
-        # This checks for missing columns in source spreadsheet
+        # Stop the import if any required PowerSchool columns are missing.
         if missing_headers:
             messagebox.showerror(
                 "Invalid Roster",
@@ -64,6 +72,7 @@ def import_roster():
                 "The roster contains all required columns."
             )
 
+            # Map each required header to its actual column position in the spreadsheet.
             column_map = {
                 "Id": headers.index("Id"),
                 "Name": headers.index("Name"),
@@ -72,6 +81,8 @@ def import_roster():
                 "Course": headers.index("Course")
             }
 
+            # Build a dictionary with one record per Student ID.
+            # A student can appear on multiple spreadsheet rows because each course is a separate enrollment.
             students = {}
 
             for row in worksheet.iter_rows(min_row=2, values_only=True):
@@ -81,6 +92,7 @@ def import_roster():
                 phone = row[column_map["Phone"]]
                 course = row[column_map["Course"]]
 
+                # Create the student only the first time the Student ID appears.
                 if student_id not in students:
                     students[student_id] = {
                         "id": student_id,
@@ -90,11 +102,14 @@ def import_roster():
                         "courses": []
                     }
 
+                # Add this row's course to the student's course list.
                 students[student_id]["courses"].append(course)
 
+            # Save the imported roster to the SQLite database.
             connection = sqlite3.connect("tier_contacts.db")
             cursor = connection.cursor()
 
+            # Save or update each student's basic information.
             for student in students.values():
                 cursor.execute("""
                     INSERT OR REPLACE INTO students (
@@ -111,6 +126,7 @@ def import_roster():
                     student["phone"]
                 ))
 
+                # Save each course enrollment without creating duplicate student/course pairs.
                 for course in student["courses"]:
                     cursor.execute("""
                         INSERT OR IGNORE INTO enrollments (
@@ -123,9 +139,11 @@ def import_roster():
                         course
                     ))
 
+            # Make the database changes permanent, then close the connection.
             connection.commit()
             connection.close()
 
+            # Diagnostic count used to confirm that multi-course students were grouped correctly.
             multiple_course_students = 0
 
             for student in students.values():
@@ -143,6 +161,8 @@ def import_roster():
     else:
         print("No file selected.")
 
+# STUDENT ROSTER WINDOW
+# Opens the roster screen and builds its controls and table.
 def open_roster():
     roster_window = tk.Toplevel(root)
 
@@ -158,6 +178,7 @@ def open_roster():
     roster_frame = ttk.Frame(roster_window)
     roster_frame.pack(padx=20, pady=10, fill="both", expand=True)
 
+    # Button used to start a new PowerSchool roster import.
     import_button = ttk.Button(
         roster_frame,
         text="Import Roster",
@@ -165,6 +186,7 @@ def open_roster():
     )
     import_button.pack(pady=10)
 
+    # Table that will display the stored student roster.
     roster_table = ttk.Treeview(
         roster_frame,
         columns=("Id", "Name", "Grade", "Phone", "Courses"),
@@ -177,6 +199,8 @@ def open_roster():
     roster_table.heading("Courses", text="Course(s)")
     roster_table.pack(fill="both", expand=True, pady=10)
 
+# MAIN APPLICATION
+# Make sure the database exists before creating the main application window.
 setup_database()
 
 root = tk.Tk()
@@ -190,6 +214,7 @@ title_label = ttk.Label(
 )
 title_label.pack(pady=30)
 
+# Frame that holds the main navigation buttons.
 menu_frame = ttk.Frame(root)
 menu_frame.pack(pady=20)
 
