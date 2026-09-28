@@ -119,7 +119,17 @@ def import_roster():
                     """, (
                         student["id"],
                         course
-               ))
+                ))
+        multiple_course_students = 0
+                        
+        for student in students.values():
+            if len(student["courses"])>1:
+                multiple_course_students += 1
+        print("Students with multiple courses:", multiple_course_students)        
+
+        for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
+            print(row)
+            
 
             connection.commit()
             connection.close()
@@ -133,15 +143,6 @@ def import_roster():
         print("Missing headers:", missing_headers)
 
     else:
-        multiple_course_students = 0
-        
-            for student in students.values():
-                if len(student["courses"])>1:
-                    multiple_course_students += 1
-            print("Students with multiple courses:", multiple_course_students)        
-    
-            for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
-                print(row)
         print("No file selected.")
 
 def open_roster():
