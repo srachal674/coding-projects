@@ -35,6 +35,10 @@ def import_roster():
                 "Roster Valid",
                 "The roster contains all required columns."
             )
+
+            first_student = list(worksheet.iter_rows(min_row=2, values_only=True))[0]
+            print("First student:", first_student)
+
         
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
