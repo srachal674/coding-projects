@@ -17,9 +17,19 @@ def import_roster():
         print("Worksheets:", workbook.sheetnames)
         worksheet = workbook.active
 
+        headers = [cell.value for cell in worksheet[1]]
+        required_headers = ['Id', 'Name', 'Grade', 'Phone', 'Course']
+        missing_headers = []
+        for header in required_headers:
+            if header not in headers:
+                missing_headers.append(header)
+        
+        print("Header found:", headers)
+        print("Missing headers:", missing_headers)
+
         for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
             print(row)
-            
+
     else:
         print("No file selected.")
 
