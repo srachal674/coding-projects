@@ -15,6 +15,11 @@ def import_roster():
         workbook = openpyxl.load_workbook(file_path)
         print("Workbook opened successfully!")
         print("Worksheets:", workbook.sheetnames)
+        worksheet = workbook.active
+
+        for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
+            print(row)
+            
     else:
         print("No file selected.")
 
