@@ -89,6 +89,39 @@ def import_roster():
             connection = sqlite3.connect("tier_contacts.db")
             cursor = connection.cursor()
 
+            for student in students.values():
+                cursor.execute("""
+                    INSTERT OR REPLACE INTO students (
+                        student_id,
+                        name,
+                        grade,
+                        phone
+                    )
+                    VALUES (?, ?, ?, ?)
+                """, (
+                    student["id"],
+                    student["name"],
+                    student["grade"],
+                    student["phone"]
+                ))
+
+                for course in student["courses"]:
+                    cursor.execute("""
+                    INSERT OR IGNORE INTO enrollments (
+                    student_id,
+                    course
+                    )
+                    VALUES (?, ?)
+                """, (
+                    student["id"],
+                    course
+               ))
+
+            connection.commit()
+            connection.close()
+
+            print("Roster saved to database.")
+                    
             print("Roster rows:", worksheet.max_row - 1)
             print("Unique students:", len(students))
             
