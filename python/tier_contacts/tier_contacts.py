@@ -36,20 +36,24 @@ def import_roster():
                 "The roster contains all required columns."
             )
 
-            first_student = list(worksheet.iter_rows(min_row=2, values_only=True))[0]
-            print("First student:", first_student)
-
-            student = {
-                "id": first_student[0],
-                "name": first_student[1],
-                "grade": first_student[2],
-                "phone": first_student[3],
-                "course": first_student[4] 
+            column_map = {
+                "Id": headers.index("Id"),
+                "Name": headers.index("Name"),
+                "Grade": headers.index("Grade"),
+                "Phone": headers.index("Phone"),
+                "Course": headers.index("Course")
             }
 
-            print("Student name:", student["name"])
-            print("Student course:", student["course"])
-                   
+            students = {}
+
+            for row in worksheet.iter_rows(min_row=2, values_only=True):
+                student_id = row[column_map["Id"]]
+                name = row[column_map["Name"]]
+                grade = row[column_map["Grade"]]
+                phone = row[column_map["Phone"]]
+                course = row[column_map["Course"]]
+                
+
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
 
