@@ -47,15 +47,16 @@ def import_roster():
         headers = [cell.value for cell in worksheet[1]]
         required_headers = ['Id', 'Name', 'Grade', 'Phone', 'Course']
         missing_headers = []
+
         for header in required_headers:
             if header not in headers:
                 missing_headers.append(header)
 
-        #This checks for missing columns in source spreadsheet
+        # This checks for missing columns in source spreadsheet
         if missing_headers:
             messagebox.showerror(
                 "Invalid Roster",
-                "Missing required columns: " + "," .join(missing_headers)
+                "Missing required columns: " + ", ".join(missing_headers)
             )
         else:
             messagebox.showinfo(
@@ -88,6 +89,7 @@ def import_roster():
                         "phone": phone,
                         "courses": []
                     }
+
                 students[student_id]["courses"].append(course)
 
             connection = sqlite3.connect("tier_contacts.db")
@@ -112,34 +114,30 @@ def import_roster():
                 for course in student["courses"]:
                     cursor.execute("""
                         INSERT OR IGNORE INTO enrollments (
-                        student_id,
-                        course
+                            student_id,
+                            course
                         )
                         VALUES (?, ?)
                     """, (
                         student["id"],
                         course
-                ))
-        multiple_course_students = 0
-                        
-        for student in students.values():
-            if len(student["courses"])>1:
-                multiple_course_students += 1
-        print("Students with multiple courses:", multiple_course_students)        
-
-        for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
-            print(row)
-            
+                    ))
 
             connection.commit()
             connection.close()
 
+            multiple_course_students = 0
+
+            for student in students.values():
+                if len(student["courses"]) > 1:
+                    multiple_course_students += 1
+
             print("Roster saved to database.")
-                    
             print("Roster rows:", worksheet.max_row - 1)
             print("Unique students:", len(students))
-            
-        print("Header found:", headers)
+            print("Students with multiple courses:", multiple_course_students)
+
+        print("Headers found:", headers)
         print("Missing headers:", missing_headers)
 
     else:
