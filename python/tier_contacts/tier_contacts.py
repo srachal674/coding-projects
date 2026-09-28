@@ -62,6 +62,9 @@ def import_roster():
                         "courses": []
                     }
                 students[student_id]["courses"].append(course)
+
+            print("Roster rows:", worksheet.max_row - 1)
+            print("Unique students:", len(students))
             
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
