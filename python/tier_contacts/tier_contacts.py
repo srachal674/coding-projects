@@ -3,7 +3,7 @@ from tkinter import ttk, filedialog
 import openpyxl
 
 def import_roster():
-    file_path = filedialog.askeopenfilename(
+    file_path = filedialog.askopenfilename(
         title="Select PowerSchool Roster",
         filetypes=[
             ("Excel files", "*.xlsx"),
