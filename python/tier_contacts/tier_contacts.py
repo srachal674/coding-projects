@@ -11,7 +11,10 @@ def import_roster():
         ]
     )
 
-    print(file_path)
+    if file_path:
+        print("File selected:", file_path)
+    else:
+        print("No file selected.")
 
 def open_roster():
     roster_window = tk.Toplevel(root)
