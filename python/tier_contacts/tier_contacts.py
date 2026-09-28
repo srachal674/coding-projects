@@ -28,6 +28,7 @@ def setup_database():
     connection.commit()
     connection.close()
 
+#This prompts user to import their roster
 def import_roster():
     file_path = filedialog.askopenfilename(
         title="Select PowerSchool Roster",
@@ -50,11 +51,11 @@ def import_roster():
             if header not in headers:
                 missing_headers.append(header)
 
-
+        #This checks for missing columns in source spreadsheet
         if missing_headers:
             messagebox.showerror(
                 "Invalid Roster",
-                "Missing required colimns: " + "," .join(missing_headers)
+                "Missing required columns: " + "," .join(missing_headers)
             )
         else:
             messagebox.showinfo(
@@ -130,8 +131,6 @@ def import_roster():
             
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
-
-       
 
     else:
         multiple_course_students = 0
