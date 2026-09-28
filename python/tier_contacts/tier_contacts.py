@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk, filedialog
+from tkinter import ttk, filedialog, messagebox
 import openpyxl
 
 def import_roster():
@@ -23,6 +23,18 @@ def import_roster():
         for header in required_headers:
             if header not in headers:
                 missing_headers.append(header)
+
+
+        if missing_headers:
+            messagebox.showerror(
+                "Invalid Roster",
+                "Missing required colimns: " + "," .join(missing_headers)
+            )
+        else:
+            messagebox.showinfo(
+                "Roster Valid",
+                "The roster contains all required columns."
+            )
         
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
