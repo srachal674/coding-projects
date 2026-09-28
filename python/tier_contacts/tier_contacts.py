@@ -104,6 +104,18 @@ def open_roster():
     )
     import_button.pack(pady=10)
 
+    roster_table = ttk.Treeview(
+        roster_frame,
+        columns=("Id", "Name", "Grade", "Phone", "Courses"),
+        show="headings"
+    )
+    roster_table.heading("Id", text="Id")
+    roster_table.heading("Name", text="Name")
+    roster_table.heading("Grade", text="Grade")
+    roster_table.heading("Phone", text="Phone")
+    roster_table.heading("Courses", text="Course(s)")
+    roster_table.pack(fill="both", expand=True, pady=10)
+
 root = tk.Tk()
 root.title("Tier Contacts")
 root.geometry("900x600")
