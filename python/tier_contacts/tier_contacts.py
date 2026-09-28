@@ -25,6 +25,9 @@ def setup_database():
         )
     """)
 
+    connection.commit()
+    connection.close()
+
 def import_roster():
     file_path = filedialog.askopenfilename(
         title="Select PowerSchool Roster",
@@ -91,7 +94,7 @@ def import_roster():
 
             for student in students.values():
                 cursor.execute("""
-                    INSTERT OR REPLACE INTO students (
+                    INSERT OR REPLACE INTO students (
                         student_id,
                         name,
                         grade,
@@ -107,14 +110,14 @@ def import_roster():
 
                 for course in student["courses"]:
                     cursor.execute("""
-                    INSERT OR IGNORE INTO enrollments (
-                    student_id,
-                    course
-                    )
-                    VALUES (?, ?)
-                """, (
-                    student["id"],
-                    course
+                        INSERT OR IGNORE INTO enrollments (
+                        student_id,
+                        course
+                        )
+                        VALUES (?, ?)
+                    """, (
+                        student["id"],
+                        course
                ))
 
             connection.commit()
@@ -128,17 +131,18 @@ def import_roster():
         print("Header found:", headers)
         print("Missing headers:", missing_headers)
 
-        multiple_course_students = 0
-
-        for student in students.values():
-            if len(student["courses"])>1:
-                multiple_course_students += 1
-        print("Students with multiple courses:", multiple_course_students)        
-
-        for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
-            print(row)
+       
 
     else:
+        multiple_course_students = 0
+        
+            for student in students.values():
+                if len(student["courses"])>1:
+                    multiple_course_students += 1
+            print("Students with multiple courses:", multiple_course_students)        
+    
+            for row in worksheet.iter_rows(min_row=1, max_row=5, values_only=True):
+                print(row)
         print("No file selected.")
 
 def open_roster():
