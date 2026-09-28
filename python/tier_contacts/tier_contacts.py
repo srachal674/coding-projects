@@ -3,6 +3,28 @@ from tkinter import ttk, filedialog, messagebox
 import openpyxl
 import sqlite3
 
+def setup_database():
+    connection = sqlite3.connect("tier_contacts.db")
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS students (
+            student_id TEXT PRIMARY KEY, 
+            name TEXT NOT NULL,
+            grade TEXT,
+            phone TEXT
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS enrollments (
+            student_id TEXT NOT NULL,
+            course TEXT NOT NULL,
+            PRIMARY KEY (student_id, course),
+            FOREIGN KEY(student_id) REFERENCES students(student_id)
+        )
+    """)
+
 def import_roster():
     file_path = filedialog.askopenfilename(
         title="Select PowerSchool Roster",
