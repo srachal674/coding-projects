@@ -139,6 +139,8 @@ def open_roster():
     roster_table.heading("Courses", text="Course(s)")
     roster_table.pack(fill="both", expand=True, pady=10)
 
+setup_database()
+
 root = tk.Tk()
 root.title("Tier Contacts")
 root.geometry("900x600")
