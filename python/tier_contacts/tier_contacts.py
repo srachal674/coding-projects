@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import openpyxl
+import sqllite3
 
 def import_roster():
     file_path = filedialog.askopenfilename(
