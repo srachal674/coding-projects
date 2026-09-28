@@ -12,7 +12,9 @@ def import_roster():
     )
 
     if file_path:
-        print("File selected:", file_path)
+        workbook = openpyxl.load_workbook(file_path)
+        print("Workbook opened successfully!")
+        print("Worksheets:", workbook.sheetnames)
     else:
         print("No file selected.")
 
