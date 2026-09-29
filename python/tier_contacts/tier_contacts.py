@@ -186,7 +186,14 @@ def load_roster_table(roster_table):
             WHERE student_id = ?
         """, (student_id,))
 
-        course_rows = course.fetchall()
+        course_rows = cursor.fetchall()
+        courses = ", ".join(course[0] for course in course_rows)
+
+        roster_table.insert(
+            "",
+            "end",
+            values=(student_id, name, grade, phone, courses)
+        )
             
 # STUDENT ROSTER WINDOW
 # Opens the roster screen and builds its controls and table.
