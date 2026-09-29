@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import openpyxl
 import sqlite3
+from pathlib import Path
 
 # DATABASE SETUP
 # Creates the SQLite tables used to store students and their course enrollments.
