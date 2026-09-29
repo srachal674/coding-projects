@@ -194,7 +194,9 @@ def load_roster_table(roster_table):
             "end",
             values=(student_id, name, grade, phone, courses)
         )
-            
+
+    connection.close()
+
 # STUDENT ROSTER WINDOW
 # Opens the roster screen and builds its controls and table.
 def open_roster():
@@ -232,6 +234,7 @@ def open_roster():
     roster_table.heading("Phone", text="Phone")
     roster_table.heading("Courses", text="Course(s)")
     roster_table.pack(fill="both", expand=True, pady=10)
+    load_roster_table(roster_table)
 
 # MAIN APPLICATION
 # Make sure the database exists before creating the main application window.
