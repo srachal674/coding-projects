@@ -173,8 +173,21 @@ def load_roster_table(roster_table):
     """)
 
     students = cursor.fetchall()
-    connection.close()
     
+    for student in students:
+        student_id = student[0]
+        name = student[1]
+        grade = student[2]
+        phone= student[3]
+
+        cursor.execute("""
+            SELECT course
+            FROM enrollments
+            WHERE student_id = ?
+        """, (student_id,))
+
+        course_rows = course.fetchall()
+            
 # STUDENT ROSTER WINDOW
 # Opens the roster screen and builds its controls and table.
 def open_roster():
