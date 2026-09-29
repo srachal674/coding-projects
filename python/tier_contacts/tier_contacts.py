@@ -161,6 +161,17 @@ def import_roster():
     else:
         print("No file selected.")
 
+#ROSTER DISPLAY
+# Loads the saved student roster from the database into the roster table.
+def load_roster_table(roster_table):
+    conection = sqlite3.connect("tier_contacts.db")
+    cursor = conection.cursor()
+    cursor,execute("""
+        SELECT student_id, name, grade, phone
+        FROM students
+        ORDER BY name
+    """)
+    
 # STUDENT ROSTER WINDOW
 # Opens the roster screen and builds its controls and table.
 def open_roster():
