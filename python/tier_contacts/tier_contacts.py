@@ -174,7 +174,8 @@ def load_roster_table(roster_table):
     """)
 
     students = cursor.fetchall()
-    
+    longest_courses = 0
+
     for student in students:
         student_id = student[0]
         name = student[1]
@@ -189,6 +190,9 @@ def load_roster_table(roster_table):
 
         course_rows = cursor.fetchall()
         courses = ", ".join(course[0] for course in course_rows)
+
+        if len(courses) > longest_courses:
+            longest_courses = len(courses)
 
         roster_table.insert(
             "",
