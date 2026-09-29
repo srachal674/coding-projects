@@ -234,6 +234,7 @@ def open_roster():
     roster_table.heading("Grade", text="Grade")
     roster_table.heading("Phone", text="Phone")
     roster_table.heading("Courses", text="Course(s)")
+    roster_table.column("Courses", width=500, stretch=False)
     horizontal_scrollbar = ttk.Scrollbar(
         roster_frame,
         orient="horizontal",
