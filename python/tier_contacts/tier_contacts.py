@@ -200,6 +200,8 @@ def load_roster_table(roster_table):
             values=(student_id, name, grade, phone, courses)
         )
 
+        roster_table.column("Courses", width=longest_courses * 7, stretch=False)
+        
     connection.close()
 
 # STUDENT ROSTER WINDOW
