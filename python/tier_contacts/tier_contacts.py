@@ -240,10 +240,9 @@ def open_roster():
         command=roster_table.xview
     )
 
-    roster_table.configure(xscrollcommand=horizontal_scrollbar.set)
-
     roster_table.pack(fill="both", expand=True, pady=10)
     load_roster_table(roster_table)
+    roster_table.configure(xscrollcommand=horizontal_scrollbar.set)
 
 # MAIN APPLICATION
 # Make sure the database exists before creating the main application window.
