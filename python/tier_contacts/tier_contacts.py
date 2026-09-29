@@ -174,6 +174,8 @@ def load_roster_table(roster_table):
     """)
 
     students = cursor.fetchall()
+
+    # Track the longest course list so the Course(s) column can be sized automatically.
     longest_courses = 0
 
     for student in students:
@@ -191,6 +193,7 @@ def load_roster_table(roster_table):
         course_rows = cursor.fetchall()
         courses = ", ".join(course[0] for course in course_rows)
 
+        # Keep the largest character count found while working through the roster.
         if len(courses) > longest_courses:
             longest_courses = len(courses)
 
@@ -200,6 +203,7 @@ def load_roster_table(roster_table):
             values=(student_id, name, grade, phone, courses)
         )
 
+    # Convert the longest character count to an approximate pixel width for the Treeview column.
     roster_table.column("Courses", width=longest_courses * 7, stretch=False)
     connection.close()
 
@@ -240,6 +244,8 @@ def open_roster():
     roster_table.heading("Phone", text="Phone")
     roster_table.heading("Courses", text="Course(s)")
     roster_table.column("Courses", width=500, stretch=False)
+
+    # Connect a horizontal scrollbar to the roster table for long course lists.
     horizontal_scrollbar = ttk.Scrollbar(
         roster_frame,
         orient="horizontal",
@@ -276,6 +282,7 @@ roster_button = ttk.Button(
     command=open_roster
 )
 roster_button.pack(pady=10)
+
 
 
 
