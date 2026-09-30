@@ -210,7 +210,7 @@ def load_roster_table(roster_table):
     # Convert the longest character count to an approximate pixel width for the Treeview column.
 
     
-    roster_table.column("Courses", width=500, stretch=False)
+    roster_table.column("Courses", width=longest_courses * 7, stretch=False)
     connection.close()
 
 # STUDENT ROSTER WINDOW
