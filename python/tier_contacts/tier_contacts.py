@@ -271,9 +271,13 @@ def open_roster():
         xscrollcommand=horizontal_scrollbar.set,
         yscrollcommand=vertical_scrollbar.set
     )
-    horizontal_scrollbar.pack(fill="x")
-    vertical_scrollbar.pack(side="right", fill="y")
-    
+    roster_table.grid(row=0, column=0, sticky="nsew")
+    vertical_scrollbar.grid(row=0, column=0, sticky="ns")
+    horizontal_scrollbar.grid(row=0, column=0, sticky="ew")
+
+    table_frame.rowconfigure(0, weight=1)
+    table_frame.columnconfigure(0, weight=1)
+     
     roster_table.pack(fill="both", expand=True, pady=10)
     load_roster_table(roster_table)
  
