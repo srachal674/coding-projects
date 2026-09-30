@@ -252,10 +252,21 @@ def open_roster():
         command=roster_table.xview
     )
 
+    # Connect a vertical scrollbar to the roster table for long student lists.
+    vertical_scrollbar = ttk.Scrollbar(
+        roster_frame,
+        orient="vertical",
+        command=roster_table.yview
+    )
+
     roster_table.pack(fill="both", expand=True, pady=10)
     load_roster_table(roster_table)
-    roster_table.configure(xscrollcommand=horizontal_scrollbar.set)
+    roster_table.configure(
+        xscrollcommand=horizontal_scrollbar.set,
+        yscrollcommand=vertical_scrollbar.set
+    )
     horizontal_scrollbar.pack(fill="x")
+    vertical_scrollbar.pack(side="right", fill="y")
 
 # MAIN APPLICATION
 # Make sure the database exists before creating the main application window.
