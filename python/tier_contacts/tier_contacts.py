@@ -278,7 +278,7 @@ def open_roster():
     table_frame.rowconfigure(0, weight=1)
     table_frame.columnconfigure(0, weight=1)
      
-    roster_table.pack(fill="both", expand=True, pady=10)
+ 
     load_roster_table(roster_table)
  
 
