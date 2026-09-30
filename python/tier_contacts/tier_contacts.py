@@ -210,7 +210,7 @@ def load_roster_table(roster_table):
     # Convert the longest character count to an approximate pixel width for the Treeview column.
 
     
-
+    roster_table.column("Courses", width=500, stretch=False)
     connection.close()
 
 # STUDENT ROSTER WINDOW
@@ -253,8 +253,13 @@ def open_roster():
     roster_table.heading("Grade", text="Grade")
     roster_table.heading("Phone", text="Phone")
     roster_table.heading("Courses", text="Course(s)")
-    
-    roster_table.column("Courses", width=500, stretch=False)
+
+    roster_table.column("Id", width=100, minwidth=75, stretch=False)
+    roster_table.column("Name", width=180, minwidth=120, stretch=False)
+    roster_table.column("Grade", width=70, minwidth=60, stretch=False)
+    roster_table.column("Phone", width=130, minwidth=100, stretch=False)
+    roster_table.column("Courses", width=500, minwidth=200, stretch=False)
+   
 
     # Connect a horizontal scrollbar to the roster table for long course lists.
     horizontal_scrollbar = ttk.Scrollbar(
