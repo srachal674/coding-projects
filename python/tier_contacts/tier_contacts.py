@@ -236,9 +236,13 @@ def open_roster():
     )
     import_button.pack(pady=10)
 
+    # Frame that keeps the roster table and its scrollbars together.
+    table_frame = ttk.Frame(roster_frame)
+    table_frame.pack(fill="both", expand=True)
+
     # Table that will display the stored student roster.
     roster_table = ttk.Treeview(
-        roster_frame,
+        table_frame,
         columns=("Id", "Name", "Grade", "Phone", "Courses"),
         show="headings"
     )
@@ -251,14 +255,14 @@ def open_roster():
 
     # Connect a horizontal scrollbar to the roster table for long course lists.
     horizontal_scrollbar = ttk.Scrollbar(
-        roster_frame,
+        table_frame,
         orient="horizontal",
         command=roster_table.xview
     )
 
     # Connect a vertical scrollbar to the roster table for long student lists.
     vertical_scrollbar = ttk.Scrollbar(
-        roster_frame,
+        table_frame,
         orient="vertical",
         command=roster_table.yview
     )
