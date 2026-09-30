@@ -35,7 +35,7 @@ def setup_database():
 
 # ROSTER IMPORT
 # Prompts the user to select a PowerSchool roster spreadsheet and imports its data.
-def import_roster():
+def import_roster(roster_table):
     file_path = filedialog.askopenfilename(
         title="Select PowerSchool Roster",
         filetypes=[
@@ -155,6 +155,7 @@ def import_roster():
             print("Roster rows:", worksheet.max_row - 1)
             print("Unique students:", len(students))
             print("Students with multiple courses:", multiple_course_students)
+            load_roster_table(roster_table)
 
         print("Headers found:", headers)
         print("Missing headers:", missing_headers)
@@ -165,6 +166,9 @@ def import_roster():
 #ROSTER DISPLAY
 # Loads the saved student roster from the database into the roster table.
 def load_roster_table(roster_table):
+    for item in roster_table.get_children():
+        roster_table.delete(item)
+
     connection = sqlite3.connect("tier_contacts.db")
     cursor = connection.cursor()
     cursor.execute("""
@@ -228,7 +232,7 @@ def open_roster():
     import_button = ttk.Button(
         roster_frame,
         text="Import Roster",
-        command=import_roster
+        command=lambda: import_roster(roster_table)
     )
     import_button.pack(pady=10)
 
