@@ -259,16 +259,16 @@ def open_roster():
         command=roster_table.yview
     )
 
-    roster_table.pack(fill="both", expand=True, pady=10)
-    
     roster_table.configure(
         xscrollcommand=horizontal_scrollbar.set,
         yscrollcommand=vertical_scrollbar.set
     )
     horizontal_scrollbar.pack(fill="x")
     vertical_scrollbar.pack(side="right", fill="y")
-
+    
+    roster_table.pack(fill="both", expand=True, pady=10)
     load_roster_table(roster_table)
+ 
 
 # MAIN APPLICATION
 # Make sure the database exists before creating the main application window.
