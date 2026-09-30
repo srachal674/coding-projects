@@ -272,8 +272,8 @@ def open_roster():
         yscrollcommand=vertical_scrollbar.set
     )
     roster_table.grid(row=0, column=0, sticky="nsew")
-    vertical_scrollbar.grid(row=0, column=0, sticky="ns")
-    horizontal_scrollbar.grid(row=0, column=0, sticky="ew")
+    vertical_scrollbar.grid(row=0, column=1, sticky="ns")
+    horizontal_scrollbar.grid(row=1, column=0, sticky="ew")
 
     table_frame.rowconfigure(0, weight=1)
     table_frame.columnconfigure(0, weight=1)
