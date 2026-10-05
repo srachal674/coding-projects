@@ -114,7 +114,7 @@ footer {
 
 /* Link Styles*/
 .link {
-    --bs-link-color:173, 216, 230;
+    --bs-link-color: 173, 216, 230;
     --bs-link-hover-color: 243, 247, 123;    
 }
 
