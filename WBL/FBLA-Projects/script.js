@@ -8,20 +8,6 @@ fetch("projects.json")
         const copyButton = document.getElementById("copyProject");
         const pdfButton = document.getElementById("savePdf");
 
-        const guidelinesSection = document.createElement("p");
-
-        const guidelinesLink = document.createElement("a");
-        guidelinesLink.href = project.eventUrl;
-        guidelinesLink.target = "_blank";
-        guidelinesLink.rel = "noopener noreferrer";
-        guidelinesLink.textContent = "official FBLA Event Details & Guidelines";
-
-        guidelinesSection.append("Use the ");
-        guidelinesSection.appendChild(guidelinesLink);
-        guidelinesSection.append(
-            " to create your requirements checklist in your README."
-        );
-
         modalBody.appendChild(guidelinesSection);
         const allProjects = [
             ...data.codingProjects,
