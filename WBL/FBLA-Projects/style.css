@@ -67,4 +67,23 @@ body {
     box-shadow: 3px 3px rgb(110, 109, 109);
 }
 
-/* Button Styles*/
+/* Modal Styles*/
+.modal-content {
+    background-color: #d9d9d9;
+    color: #000033;
+    border: 2px solid #000033;
+    border-radius: 12px;
+}
+
+.modal-header {
+    background-color: #000033;
+    color: goldenrod;
+}
+
+.modal-body {
+    background-color: #f3f3f3;
+}
+
+.modal-content {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
