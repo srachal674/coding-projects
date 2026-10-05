@@ -1,4 +1,4 @@
-/*Font*/
+/*Font styles*/
 .manjari-thin {
     font-family: "Manjari", sans-serif;
     font-weight: 100;
@@ -17,7 +17,7 @@
     font-style: normal;
 }
 
-
+/* Page Styles */
 h1 {
     font-family: 'Manjari', sans-serif;
     font-weight: 100;
@@ -38,12 +38,14 @@ body {
     color: #000033;
 }
 
+/* Accordion Styles */
 .accordion-button {
     font-family: inherit;
     color: goldenrod;
     background-color: #000033;
 }
 
+/* Card Styles */
 .outer-card {
     border: 1px solid;
     border-radius: 10px;
