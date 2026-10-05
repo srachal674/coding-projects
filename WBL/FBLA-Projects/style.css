@@ -76,7 +76,7 @@ body {
     box-shadow: 3px 3px rgb(110, 109, 109);
 }
 
-.footer-card (
+.footer-card {
     border: 1px solid;
     border-radius: 10px;
     background-color: #000033;
@@ -84,7 +84,7 @@ body {
     padding: 20px 20px;
     margin-bottom: 24px;
     margin-top: 4px;
-)
+}
 
 /* Button Styles*/
 .project-button {
