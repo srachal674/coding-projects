@@ -47,6 +47,6 @@ body {
 
 .card {
     border: solid;
-    border-radius: 10px;
+    border-radius: 1px;
     border-color: #000033;
 }
