@@ -8,7 +8,6 @@ fetch("projects.json")
         const copyButton = document.getElementById("copyProject");
         const pdfButton = document.getElementById("savePdf");
 
-        modalBody.appendChild(guidelinesSection);
         const allProjects = [
             ...data.codingProjects,
             ...data.businessMarketingEntrepreneurship,
