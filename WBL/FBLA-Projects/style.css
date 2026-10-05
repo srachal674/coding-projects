@@ -38,6 +38,15 @@ body {
     color: #000033;
 }
 
+footer {
+    color: silver;
+    text-align: center;
+    font-family: "Manjari", sans-serif;
+    font-weight: 100;
+    font-style: thin;
+    font-size: 12px;
+
+}
 
 /* Accordion Styles */
 .accordion-button {
@@ -78,15 +87,7 @@ body {
     margin-top: 4px;
 }
 
-.footer {
-    color: silver;
-    text-align: center;
-    font-family: "Manjari", sans-serif;
-    font-weight: 100;
-    font-style: thin;
-    font-size: 12px;
 
-}
 
 /* Button Styles*/
 .project-button {
