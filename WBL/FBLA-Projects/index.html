@@ -34,25 +34,20 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="d-grid gap-2">
-                                                    <button type="button" class="btn btn-outline-primary">Coding &
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Coding &
                                                         Programming</button>
-                                                    <button type="button" class="btn btn-outline-primary">Computer Game
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Computer Game
                                                         & Simulation Programming</button>
-                                                    <button type="button" class="btn btn-outline-primary">Data Analysis</button>
-                                                    <button type="button" class="btn btn-outline-primary">Introduction
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Data Analysis</button>
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Introduction
                                                         to Programming (9th/10th only)</button>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="d-grid gap-2">
-                                                    <button type="button" class="btn btn-outline-primary">Mobile
-                                                        Application
-                                                        Development</button>
-                                                    <button type="button" class="btn btn-outline-primary">Website Coding
-                                                        &
-                                                        Development</button>
-                                                    <button type="button" class="btn btn-outline-primary">Website
-                                                        Design</button>
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Mobile Application Development</button>
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Website Coding & Development</button>
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="codingProjects">Website Design</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,8 +57,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="card">
                     <div class="card-body">
                         <div class="accordion-item">
@@ -79,21 +72,21 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="d-grid gap-2">
-                                                <button type="button" class="btn btn-outline-primary">Business
+                                                <button type="button" class="btn btn-outline-primary project-button" data-project="businessMarketingEntrepreneurship">Business
                                                     Plan</button>
-                                                <button type="button" class="btn btn-outline-primary">Event
+                                                <button type="button" class="btn btn-outline-primary project-button" data-project="businessMarketingEntrepreneurship">Event
                                                     Planning</button>
-                                                <button type="button" class="btn btn-outline-primary">Introduction to
+                                                <button type="button" class="btn btn-outline-primary project-button" data-project="businessMarketingEntrepreneurship">Introduction to
                                                     Business Presentation (9th/10th only)</button>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="d-grid gap-2">
-                                                <button type="button" class="btn btn-outline-primary">Introduction ti
+                                                <button type="button" class="btn btn-outline-primary project-button" data-project="businessMarketingEntrepreneurship">Introduction ti
                                                     Social Media Strategy (9th/10th only)</button>
-                                                <button type="button" class="btn btn-outline-primary">Sales
+                                                <button type="button" class="btn btn-outline-primary project-button" data-project="businessMarketingEntrepreneurship">Sales
                                                     Presentation</button>
-                                                <button type="button" class="btn btn-outline-primary">Social Media
+                                                <button type="button" class="btn btn-outline-primary project-button" data-project="businessMarketingEntrepreneurship">Social Media
                                                     Strategies</button>
                                             </div>
                                         </div>
@@ -120,19 +113,19 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="d-grid gap-2">
-                                                    <button type="button" class="btn btn-outline-primary">Digital
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="graphicDesign">Digital
                                                         Animation</button>
-                                                    <button type="button" class="btn btn-outline-primary">Digital Video
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="graphicDesign">Digital Video
                                                         Production</button>
-                                                    <button type="button" class="btn btn-outline-primary">Graphic
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="graphicDesign">Graphic
                                                         Design</button>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="d-grid gap-2">
-                                                    <button type="button" class="btn btn-outline-primary">Public Service
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="graphicDesign">Public Service
                                                         Announcement</button>
-                                                    <button type="button" class="btn btn-outline-primary">Visual
+                                                    <button type="button" class="btn btn-outline-primary project-button" data-project="graphicDesign">Visual
                                                         Design</button>
                                                 </div>
                                             </div>
@@ -145,11 +138,21 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- Reusable Project Description Modal -->
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            ...
+                <!-- Reusable Project Description Modal -->
+        <div class="modal fade" id="projectModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="projectModalTitle"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+        
+                    <div class="modal-body" id="projectModalBody">
+                    </div>
+        
+                </div>
+            </div>
         </div>
 
         <!-- JavaScript -->
