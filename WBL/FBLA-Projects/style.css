@@ -50,6 +50,7 @@ body {
     border-radius: 10px;
     border-color: #777779;
     background-color: silver;
+    box-shadow: 2px 2px rgb(163, 163, 163) ;
     padding: 20px 20px;
     margin-bottom: 24px;
     margin-top: 4px;
