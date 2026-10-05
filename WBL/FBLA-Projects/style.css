@@ -24,8 +24,6 @@ h1 {
     font-style: normal;
     text-align: center;
     color: #000033;
-    
-
 }
 
 h2 {
@@ -41,9 +39,9 @@ body {
 }
 
 .accordion-button {
-    background-color: #000033;
     font-family: inherit;
     color: goldenrod;
+    background-color: #000033;    
 }
 
 .outer-card {
@@ -55,16 +53,14 @@ body {
     padding: 20px 20px;
     margin-bottom: 24px;
     margin-top: 4px;
-
 }
 
 .card {
+    padding: 20px 20px;
+    margin-bottom: 24px;
     border: 1px solid;
     border-radius: 10px;
     border-color: #000033;
     background-color: #d9d9d9;
-    box-shadow: 3px 3px rgb(110, 109, 109);
-    padding: 20px 20px;
-    margin-bottom: 24px;
-    
+    box-shadow: 3px 3px rgb(110, 109, 109);    
 }
