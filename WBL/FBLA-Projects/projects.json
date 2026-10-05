@@ -1,6 +1,49 @@
 [
     {
-        "name": "Website Coding & Development",
-        "description": "Description here"
+        "name": "Coding & Programming",
+        "description": "Design and build a standalone computer program that solves a specific problem or completes a defined task. You will demonstrate the finished application and explain your programming decisions, logic, and development process."
     }
 ]
+
+[
+    {
+        "name": "Computer Game & Simulation Programming",
+        "description": "Create an interactive game or simulation based on the FBLA topic. The project should demonstrate programming ability, problem-solving, creativity, and thoughtful game or simulation design."
+    }
+]
+
+[
+    {
+        "name": "Data Analysis",
+        "description": "Analyze a provided data set, identify meaningful patterns or insights, and communicate your conclusions using effective data visualizations. You will present your analysis and explain how the information could support decision-making."
+    }
+]
+
+[
+    {
+        "name": "Introduction to Programming",
+        "discription": "9th–10th grade only. Develop a basic computer program based on the assigned FBLA topic. You will demonstrate the working program and explain how your code, logic, and design solve the assigned challenge."
+    }
+]
+
+[
+    {
+        "name": "Mobile Application Development",
+        "description": "Design and build a functional mobile application based on the current FBLA topic. The finished app should demonstrate useful functionality, effective interface design, creativity, and technical problem-solving."
+    }
+]
+
+[
+    {
+        "name": "Website Coding & Development",
+        "development": "Build a functioning website based on the assigned topic, with an emphasis on programming and functionality rather than appearance alone. You will demonstrate the working site and explain the technical choices behind it."
+    }
+]
+
+[
+    {
+        "name": "Website Design",
+        "development": "Create a visually appealing, easy-to-use website based on the assigned topic. This event emphasizes front-end design, layout, navigation, usability, and the overall user experience."
+    }
+]
+
