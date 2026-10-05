@@ -93,6 +93,6 @@ fetch("projects.json")
                 printWindow.onload = () => {
                     printWindow.print();
                 };
-            });            
-        });        
+            });
+        });
     });
