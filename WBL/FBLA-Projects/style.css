@@ -79,15 +79,13 @@ footer {
 
 .footer-card {
     border: 1px solid;
+    border-color: goldenrod;
     border-radius: 10px;
     background-color: #000033;
-    box-shadow: 2px 2px rgb(163, 163, 163);
-    padding: 5
-    px 20px;
+    box-shadow: 2px 2px rgb(56, 56, 55);
+    padding: 5px 20px;
     margin: 24px 60px;
 }
-
-
 
 /* Button Styles*/
 .project-button {
