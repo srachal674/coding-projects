@@ -42,6 +42,7 @@ body {
 
 .accordion-button {
     background-color: #000033;
+    font-family: inherit;
     color: goldenrod;
 }
 
