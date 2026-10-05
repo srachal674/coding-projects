@@ -20,8 +20,10 @@
 
 h1 {
     font-family: 'manjari-thin', sans-serif, 'manjari-regular', sans-serif, 'manjari-bold', sans-serif;
-    color: #000033;
     text-align: center;
+    color: #000033;
+    
+
 }
 
 body {
