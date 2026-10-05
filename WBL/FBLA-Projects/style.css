@@ -72,14 +72,25 @@ body {
     background-color: white;
     color: #000033;
     border: 2px solid goldenrod;
+
+    --bs-btn-active-bg: #000033;
+    --bs-btn-active-color: goldenrod;
+    --bs-btn-active-border-color: goldenrod;
+
+    --bs-btn-hover-bg: #000033;
+    --bs-btn-hover-color: goldenrod;
+    --bs-btn-hover-border-color: goldenrod;
 }
 
 .project-button:hover,
 .project-button:focus,
-.project-button:active {
+.project-button:active,
+.project-button:focus-visible {
     background-color: #000033;
     color: goldenrod;
     border-color: goldenrod;
+    box-shadow: none;
+    outline: none;
 }
 
 /* Modal Styles*/
