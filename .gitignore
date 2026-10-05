@@ -14,3 +14,8 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Tier Contacts now lives in its own private repository
+/python/tier_contacts/
+/tier_contacts.db
+/tier_contacts.db-*

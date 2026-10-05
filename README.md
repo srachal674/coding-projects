@@ -33,3 +33,7 @@ The website remains in the separate [portfolio repository](https://github.com/sr
 ## Preservation record
 
 The September 23, 2026 consolidation preserved the original histories and the previous contents of this repository under `preserved/...` tags. See [the consolidation record](docs/repository-consolidation.md) for exact commits and recovery locations.
+
+## Tier Contacts
+
+Tier Contacts development has moved to its own private repository. Its source and local database are no longer maintained here. The other learning projects remain in this repository.
