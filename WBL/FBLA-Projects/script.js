@@ -2,6 +2,12 @@ fetch("projects.json")
     .then(response => response.json())
     .then(data => {
 
+        const modalTitle = document.getElementById("projectModalTitle");
+        const modalBody = document.getElementById("projectModalBody");
+
+        const copyButton = document.getElementById("copyProject");
+        const pdfButton = document.getElementById("savePdf");
+
         const allProjects = [
             ...data.codingProjects,
             ...data.businessMarketingEntrepreneurship,
@@ -19,11 +25,9 @@ fetch("projects.json")
                     item => item.name === projectName
                 );
 
-                document.getElementById("projectModalTitle").textContent =
-                    project.name;
+                modalTitle.textContent = project.name;
 
-                document.getElementById("projectModalBody").textContent =
-                    project.description;
+                modalBody.textContent = project.description;
 
                 const modal = new bootstrap.Modal(
                     document.getElementById("projectModal")

@@ -128,6 +128,7 @@ footer {
 
 .modal-body {
     background-color: #f3f3f3;
+    white-space: pre-line;
 }
 
 .modal-content {
