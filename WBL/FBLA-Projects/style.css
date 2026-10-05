@@ -38,6 +38,16 @@ body {
     color: #000033;
 }
 
+.footer {
+    background-color: #000033;
+    text-align: center;
+    font-family: "Manjari", sans-serif;
+    font-weight: 100;
+    font-style: thin;
+    font-size: 12px;
+    color: silver;
+}
+
 /* Accordion Styles */
 .accordion-button {
     font-family: inherit;
