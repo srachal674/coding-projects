@@ -41,7 +41,7 @@ body {
 .accordion-button {
     font-family: inherit;
     color: goldenrod;
-    background-color: #000033;    
+    background-color: #000033;
 }
 
 .outer-card {
@@ -49,7 +49,7 @@ body {
     border-radius: 10px;
     border-color: #777779;
     background-color: silver;
-    box-shadow: 2px 2px rgb(163, 163, 163) ;
+    box-shadow: 2px 2px rgb(163, 163, 163);
     padding: 20px 20px;
     margin-bottom: 24px;
     margin-top: 4px;
@@ -62,5 +62,5 @@ body {
     border-radius: 10px;
     border-color: #000033;
     background-color: #d9d9d9;
-    box-shadow: 3px 3px rgb(110, 109, 109);    
+    box-shadow: 3px 3px rgb(110, 109, 109);
 }
