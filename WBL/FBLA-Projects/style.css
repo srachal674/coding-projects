@@ -113,12 +113,9 @@ footer {
 }
 
 /* Link Styles*/
-.link a {
-    color: lightblue;
-}
-
-.link a:hover {
-  color: #f3f77b;
+.link {
+    --bs-link-color:173, 216, 230;
+    --bs-link-hover-color: 243, 247, 123;    
 }
 
 /* Modal Styles*/
