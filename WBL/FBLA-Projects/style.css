@@ -55,6 +55,10 @@ footer {
     margin: 24px 60px;
 }
 
+title {
+    text-shadow: 2px 2px #000033; 
+}
+
 /* Accordion Styles */
 .accordion-button {
     font-size: 24px;
@@ -70,7 +74,7 @@ footer {
     border-radius: 10px;
     border-color: #777779;
     background-color: silver;
-    box-shadow: 2px 2px rgb(163, 163, 163);
+    box-shadow: 3px 3px rgb(163, 163, 163);
     padding: 30px 30px;
     margin: 4px 40px 24px 40px;
 }
