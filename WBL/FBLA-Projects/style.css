@@ -45,6 +45,16 @@ body {
     color: goldenrod;
 }
 
+.outer-card {
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #777779;
+    padding: 5px 5px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+
+}
+
 .card {
     border: 1px solid;
     border-radius: 10px;
