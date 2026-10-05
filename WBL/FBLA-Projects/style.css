@@ -45,7 +45,14 @@ footer {
     font-weight: 100;
     font-style: thin;
     font-size: 12px;
-
+    padding: 4px 4px;
+    border: 1px solid;
+    border-color: goldenrod;
+    border-radius: 10px;
+    background-color: #000033 semi-transparent;
+    box-shadow: 2px 2px rgb(56, 56, 55);
+    padding: 5px 20px;
+    margin: 24px 60px;
 }
 
 /* Accordion Styles */
@@ -76,16 +83,6 @@ footer {
     border-color: #000033;
     background-color: #d9d9d9;
     box-shadow: 3px 3px rgb(110, 109, 109);
-}
-
-.footer-card {
-    border: 1px solid;
-    border-color: goldenrod;
-    border-radius: 10px;
-    background-color: #000033;
-    box-shadow: 2px 2px rgb(56, 56, 55);
-    padding: 5px 20px;
-    margin: 24px 60px;
 }
 
 /* Button Styles*/
