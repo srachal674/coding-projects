@@ -28,9 +28,7 @@
             "name": "Website Design",
             "description": "Create a visually appealing, easy-to-use website based on the assigned topic. This event emphasizes front-end design, layout, navigation, usability, and the overall user experience."
         },
-    ]
-},
-{        
+    ],       
     "businessMarketingEntrepreneurship": [
         {
             "name": "Business Plan",
@@ -56,9 +54,7 @@
             "name": "Social Media Strategies",
             "description": "Develop a detailed social media strategy for the assigned FBLA topic. Your plan should identify the target audience, appropriate platforms, content strategy, branding, engagement methods, and ways to measure whether the campaign is successful."
         },
-    ]
-},
-{    
+    ],   
     "graphicDesign": [
         {
             "name": "Digital Animation",
