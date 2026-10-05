@@ -35,5 +35,64 @@ fetch("projects.json")
 
                 modal.show();
             });
+            copyButton.addEventListener("click", () => {
+
+                const textToCopy =
+                    modalTitle.textContent +
+                    "\n\n" +
+                    modalBody.innerText;
+
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => {
+                        copyButton.textContent = "Copied!";
+
+                        setTimeout(() => {
+                            copyButton.textContent = "Copy";
+                        }, 1500);
+                    });
+            });
+
+            pdfButton.addEventListener("click", () => {
+
+                const printWindow = window.open("", "_blank");
+
+                printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>${modalTitle.textContent}</title>
+
+            <style>
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin: 40px;
+                    color: #000033;
+                }
+
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 24px;
+                }
+
+                p {
+                    line-height: 1.6;
+                }
+            </style>
+        </head>
+
+        <body>
+            <h1>${modalTitle.textContent}</h1>
+
+            ${modalBody.innerHTML}
+        </body>
+        </html>
+    `);
+
+                printWindow.document.close();
+
+                printWindow.onload = () => {
+                    printWindow.print();
+                };
+            });            
         });        
     });
