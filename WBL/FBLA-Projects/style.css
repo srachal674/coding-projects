@@ -45,14 +45,13 @@ footer {
     font-weight: 100;
     font-style: thin;
     font-size: 12px;
-    padding: 4px 4px;
     border: 1px solid;
     border-color: goldenrod;
     border-radius: 10px;
     background-color: #000033;
     box-shadow: 2px 2px rgb(56, 56, 55);
-    padding: 5px 20px;
-    margin: 24px 60px;
+    padding: 10px 30px 10px 30px;
+    margin: 4px 40px 4px 40px;
 }
 
 .page-title {
@@ -68,6 +67,7 @@ footer {
     border-radius: 8px;
     color: goldenrod;
     background-color: #000033;
+    box-shadow: 3px 3px rgba(0, 0, 51, 0.35);
 }
 
 /* Card Styles */
@@ -76,13 +76,13 @@ footer {
     border-radius: 10px;
     border-color: #777779;
     background-color: silver;
-    box-shadow: 3px 3px rgb(163, 163, 163);
-    padding: 20px 30px 20px 30px;
+    box-shadow: 3px 3px rgb(96, 95, 95);
+    padding: 30px 30px 3px 30px;
     margin: 4px 40px 4px 40px;
 }
 
 .card {
-    padding: 5px 10px 5px 10px;
+    padding: 20px 20px 20px 20px;
     margin-bottom: 24px;
     border: 1px solid;
     border-radius: 20px;
