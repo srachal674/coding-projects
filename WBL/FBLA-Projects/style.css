@@ -66,7 +66,10 @@ footer {
     border-radius: 8px;
     color: goldenrod;
     background-color: #000033;
-    text-align: center;
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
 }
 
 /* Card Styles */
@@ -76,7 +79,7 @@ footer {
     border-color: #777779;
     background-color: silver;
     box-shadow: 3px 3px rgb(163, 163, 163);
-    padding: 25px 25px 5px 25px ;
+    padding: 25px 25px 5px 25px;
     margin: 4px 40px 4px 40px;
 }
 
@@ -120,7 +123,7 @@ footer {
 /* Link Styles*/
 .link {
     --bs-link-color-rgb: 173, 216, 230;
-    --bs-link-hover-color-rgb: 243, 247, 123;    
+    --bs-link-hover-color-rgb: 243, 247, 123;
 }
 
 /* Modal Styles*/
