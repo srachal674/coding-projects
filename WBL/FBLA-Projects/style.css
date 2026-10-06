@@ -51,7 +51,7 @@ footer {
     background-color: #000033;
     box-shadow: 2px 2px rgb(56, 56, 55);
     padding: 10px 30px 10px 30px;
-    margin: 4px 40px 4px 40px;
+    margin: 4px 100px;
 }
 
 .page-title {
@@ -59,8 +59,7 @@ footer {
 }
 
 /* Accordion Styles */
-.accordion-button
-.accordion-button:not(.collapsed) {
+.accordion-button {
     --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23DAA520'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
     --bs-accordion-btn-active-icon: var(--bs-accordion-btn-icon);
     font-size: 20px;
@@ -71,6 +70,11 @@ footer {
     box-shadow: 3px 3px rgba(0, 0, 51, 0.35);
 }
 
+.accordion-button:not(.collapsed) {
+    color: goldenrod;
+    background-color: #000033;
+}
+
 /* Card Styles */
 .outer-card {
     border: 1px solid;
@@ -78,8 +82,8 @@ footer {
     border-color: #777779;
     background-color: silver;
     box-shadow: 3px 3px rgb(96, 95, 95);
-    padding: 30px 30px 3px 30px;
-    margin: 4px 40px 4px 40px;
+    padding: 30px 30px 30px 30px;
+    margin: 10px 100px;
 }
 
 /* Button Styles*/
