@@ -45,11 +45,11 @@ footer {
     font-weight: 100;
     font-style: thin;
     font-size: 16px;
-    border: 1px solid;
+    border: 2px solid;
     border-color: goldenrod;
     border-radius: 10px;
     background-color: #000033;
-    box-shadow: 2px 2px rgb(56, 56, 55);
+    box-shadow: 3px 3px 5px rgba(75, 75, 78, 0.45);
     padding: 10px 30px 10px 30px;
     margin: 4px 100px;
 }
@@ -67,7 +67,7 @@ footer {
     border-radius: 8px;
     color: goldenrod;
     background-color: #000033;
-    box-shadow: 3px 3px rgba(0, 0, 51, 0.35);
+    box-shadow: 4px 5px 7px rgba(0, 0, 51, 1);
 }
 
 .accordion-button:not(.collapsed) {
@@ -77,7 +77,7 @@ footer {
 
 /* Card Styles */
 .outer-card {
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 10px;
     border-color: #777779;
     background-color: silver;
