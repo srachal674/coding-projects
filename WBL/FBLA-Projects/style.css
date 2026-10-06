@@ -77,12 +77,12 @@ footer {
     border-color: #777779;
     background-color: silver;
     box-shadow: 3px 3px rgb(163, 163, 163);
-    padding: 25px 25px 5px 25px;
+    padding: 20px 30px 20px 30px;
     margin: 4px 40px 4px 40px;
 }
 
 .card {
-    padding: 20px 20px;
+    padding: 5pxpx 10px 5px 10px;
     margin-bottom: 24px;
     border: 1px solid;
     border-radius: 20px;
