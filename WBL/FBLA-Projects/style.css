@@ -20,15 +20,15 @@
 /* Page Styles */
 h1 {
     font-family: 'Manjari', sans-serif;
-    font-weight: 100;
-    font-style: normal;
+    font-weight: 400;
     text-align: center;
     color: #000033;
+    margin-top: 25px;
 }
 
 h2 {
     font-family: "Manjari", sans-serif;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
 }
 
@@ -44,7 +44,7 @@ footer {
     font-family: "Manjari", sans-serif;
     font-weight: 100;
     font-style: thin;
-    font-size: 16px;
+    font-size: 18px;
     border: 2px solid;
     border-color: goldenrod;
     border-radius: 10px;
@@ -63,7 +63,9 @@ footer {
     --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23DAA520'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
     --bs-accordion-btn-active-icon: var(--bs-accordion-btn-icon);
     font-size: 20px;
-    font-family: inherit;
+    font-family: "Manjari", sans-serif;
+    font-weight: 300;
+    font-size: 23px;
     border-radius: 8px;
     color: goldenrod;
     background-color: #000033;
@@ -92,14 +94,16 @@ footer {
     font-size: large;
     color: #000033;
     border: 2px solid goldenrod;
-
+    font-family:"Manjari", sans-serif;
+    font-weight: 200;
+    font-size: 22x;
     --bs-btn-active-bg: #000033;
     --bs-btn-active-color: goldenrod;
     --bs-btn-active-border-color: goldenrod;
-
     --bs-btn-hover-bg: #000033;
     --bs-btn-hover-color: goldenrod;
     --bs-btn-hover-border-color: goldenrod;
+    
 }
 
 .project-button:hover,
@@ -111,6 +115,9 @@ footer {
     border-color: goldenrod;
     box-shadow: none;
     outline: none;
+    font-family: "Manjari", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
 }
 
 /* Link Styles*/
