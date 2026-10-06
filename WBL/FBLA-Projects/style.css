@@ -75,8 +75,8 @@ footer {
     border-color: #777779;
     background-color: silver;
     box-shadow: 3px 3px rgb(163, 163, 163);
-    padding: 30px 30px;
-    margin: 4px 40px 24px 40px;
+    padding: 25px 25px 5px 25px ;
+    margin: 4px 40px 4px 40px;
 }
 
 .card {
