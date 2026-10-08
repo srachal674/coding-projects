@@ -19,13 +19,13 @@
 h1 {
     font-family: "Manjani", sans-serif;
     font-weight: 200;
-    color: rgba(244, 171, 25, 1)
-    
-    
+    color: rgba(244, 171, 25, 1);
+    text-shadow: rgb(125, 123, 123, 0.25);
+    box-shadow: 3px 3px 3px;   
 }
 
 .card {
-    margin: 100px;
+    margin: 10px;
     background: linear-gradient(
         rgba(10, 46, 127, 1),
         rgba(29, 82, 188, 1),
