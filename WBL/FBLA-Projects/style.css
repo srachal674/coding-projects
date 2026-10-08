@@ -51,8 +51,8 @@ footer {
     border-radius: 10px;
     background-color: #000033;
     box-shadow: 3px 3px 5px rgba(75, 75, 78, 0.45);
-    padding: 10px 30px 10px 30px;
-    margin: 4px 100px;
+    padding: 5px 0.5px 0.5px 5px;
+    margin: 1px 100px;
 }
 
 .page-title {
@@ -160,6 +160,6 @@ footer {
     }
 
     .footer-card {
-        margin: 24px 16px;
+        margin: 16px 16px;
     }
 }
