@@ -25,7 +25,8 @@ h1 {
 }
 
 .card {
-    margin: 10px;
+    padding: 0px 5px;
+    margin: 30px 30px;
     background: linear-gradient(
         rgba(10, 46, 127, 1),
         rgba(29, 82, 188, 1),
