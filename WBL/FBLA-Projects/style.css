@@ -40,6 +40,9 @@ body {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: silver;
     text-align: center;
     font-family: "Manjari", sans-serif;
@@ -51,8 +54,15 @@ footer {
     border-radius: 10px;
     background-color: #000033;
     box-shadow: 3px 3px 5px rgba(75, 75, 78, 0.45);
-    padding: 5px 0.5px 0.5px 5px;
+    padding: 5px;
     margin: 1px 100px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1;
+    /* Balance Manjari's extra space below the letters. */
+    padding-top: 0.3em;
 }
 
 .page-title {
