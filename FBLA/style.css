@@ -24,8 +24,7 @@ h1 {
     /* Shadow behind the letters */
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
 
-    /* Gold line/shadow under the heading */
-    box-shadow: 0 3px 2px rgba(244, 171, 25, 0.9);
+    
 }
 
 .card {
@@ -54,6 +53,8 @@ body {
 
 .flex-container {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
+    /* Gold line/shadow under the heading */
+        box-shadow: 0 3px 2px rgba(244, 171, 25, 0.9);
 }
