@@ -19,10 +19,12 @@
 h1 {
     font-family: "Manjari", sans-serif;
     font-weight: 200;
+    font-size: 44px;
     color: rgba(244, 171, 25, 1);
 
     /* Shadow behind the letters */
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.35),
+        4px 4px 4px rgba(0, 0, 0, 0.45);
 
     
 }
