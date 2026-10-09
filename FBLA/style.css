@@ -46,6 +46,7 @@ h1 {
 }
 
 body {
+    background-color: #f8f5ee;
     font-family: "Manjari", sans-serif;
     font-weight: normal;
     color: rgba(10, 46, 127, 1),
@@ -69,6 +70,11 @@ body {
     width: calc(100% - 32px);
     max-width: 640px;
     margin: 24px auto;
+}
+
+#carouselStacked .btn-icon {
+    background-color: #f4ab19;
+    color: #0a2e7f;
 }
 
 #carouselStacked .carousel-item {
