@@ -36,4 +36,12 @@ h1 {
         rgba(29, 82, 188, 1),
         rgba(34, 106, 221, 1)
     );
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.24),
+        0 3px 8px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 }
