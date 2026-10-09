@@ -56,5 +56,5 @@ body {
     justify-content: space-between;
     align-items: center;
     /* Gold line/shadow under the heading */
-        box-shadow: 0 3px 2px rgba(244, 171, 25, 0.9);
+    box-shadow: 0 3px 2px rgba(244, 171, 25, 0.9);
 }
