@@ -45,3 +45,13 @@ h1 {
         inset 0 1px 0 rgba(255, 255, 255, 0.35),
         inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 }
+
+body {
+    font-family: "Manjari", sans-serif;
+    font-weight: normal;
+    color: rgba(10, 46, 127, 1),
+}
+
+img {
+    ;
+}
