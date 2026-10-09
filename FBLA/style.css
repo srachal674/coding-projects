@@ -63,3 +63,19 @@ body {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
     border-radius: 2px;
 }
+
+/* Carousel Styling */
+#carouselStacked {
+    width: calc(100% - 32px);
+    max-width: 640px;
+    margin: 24px auto;
+}
+
+#carouselStacked .carousel-item {
+    background-color: #0a2e7f;
+}
+
+#carouselStacked .carousel-item img {
+    height: clamp(220px, 45vw, 360px);
+    object-fit: contain;
+}
