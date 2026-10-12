@@ -25,8 +25,6 @@ h1 {
     /* Shadow behind the letters */
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.35),
         4px 4px 4px rgba(0, 0, 0, 0.45);
-
-
 }
 
 .card {
@@ -65,7 +63,6 @@ body {
     border-radius: 2px;
 }
 
-/* Carousel Styling */
 /* Whole carousel: space from screen edges */
 #carouselMultiple {
     width: calc(100% - 60px);
@@ -79,17 +76,17 @@ body {
     --bs-carousel-fade-duration: 5s;
 }
 
-#carouselStacked .carousel-item {
-    background-color: #0a2e7f;
-}
-
 #carouselMultiple .carousel-item img {
     height: clamp(220px, 45vw, 360px);
     object-fit: contain;
 }
 
-/* Arrange the three photos and add space between them */
+/* Arrange the three photos, background color, and add space between them */
 #carouselStacked {
     display: flex;
     gap: var(--bs-carousel-items-gap);
+}
+
+#carouselStacked .carousel-item {
+    background-color: #0a2e7f;
 }
