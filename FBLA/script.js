@@ -25,10 +25,22 @@ const photos = [
     "assets/State2025_5.jpg"
 ]
 
-const photo1 = document.getElementById("photo1");
-const photo2 = document.getElementById("photo2");
-const photo3 = document.getElementById("photo3");
+const photoContainer =document.getElementById("carouselStacked");
 
-photo1.src = photos[0];
-photo2.src = photos[5];
-photo3.src = photos[18];
+// Remove the three existing placeholders.
+photos.forEach((filename, index) => {
+    const slide =document.createElement("div");
+    slide.className = "carousel-item";
+
+    if (index === 0) {
+        slide.classList.add("active");
+    }
+
+    const image = document.createElement("img");
+    image.src = filename;
+    image.alt = "FBLA chapter photl";
+    image.className = "d-block w-100 rounded-5";
+
+    slide.appendChild(image);
+    photoContainer.appendChild(slide);
+});
