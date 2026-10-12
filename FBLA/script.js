@@ -28,6 +28,7 @@ const photos = [
 const photoContainer =document.getElementById("carouselStacked");
 
 // Remove the three existing placeholders.
+photoContainer.replaceChildren();
 photos.forEach((filename, index) => {
     const slide =document.createElement("div");
     slide.className = "carousel-item";
