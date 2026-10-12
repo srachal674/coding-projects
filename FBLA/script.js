@@ -28,3 +28,7 @@ const photos = [
 const photo1 = document.getElementById("photo1");
 const photo2 = document.getElementById("photo2");
 const photo3 = document.getElementById("photo3");
+
+photo1.src = photos[0];
+photo2.src = photos[5];
+photo3.src = photos[18];

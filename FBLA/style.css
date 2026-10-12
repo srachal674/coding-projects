@@ -73,7 +73,8 @@ body {
 #carouselMultiple .btn-icon {
     background-color: #f4ab19;
     color: #0a2e7f;
-    --bs-carousel-fade-duration: 5s;
+    
+    --carousel-fade-duration: .6s,
 }
 
 #carouselMultiple .carousel-item img {
@@ -85,8 +86,4 @@ body {
 #carouselStacked {
     display: flex;
     gap: var(--bs-carousel-items-gap);
-}
-
-#carouselStacked .carousel-item {
-    background-color: #0a2e7f;
 }
