@@ -66,12 +66,20 @@ body {
 }
 
 /* Carousel Styling */
+/* Whole carousel: space from screen edges */
 #carouselMultiple {
     display: flex;
     width: calc(100% - 60px);
     margin: 0 30px;
 }
 
+/* Arrange the three photos and add space between them */
+#carouselStacked {
+    display: flex;
+    gap: var(--bs-carousel-items-gap);
+}
+
+/* Previous and Next buttons: gold with blue arrows */
 #carouselMultiple .btn-icon {
     background-color: #f4ab19;
     color: #0a2e7f;
