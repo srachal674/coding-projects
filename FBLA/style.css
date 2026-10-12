@@ -53,8 +53,23 @@ h1 {
 body {
     background-color: #f8f5ee;
     font-family: "Manjari", sans-serif;
-    font-weight: normal;
-    color: rgba(10, 46, 127, 1),
+    font-weight: 600;
+    color: rgba(10, 46, 127, 1);
+}
+
+.hub-columns {
+    margin: 30px;
+}
+
+.hub-column {
+    flex: 1 1 240px;
+    min-height: 160px;
+    color: #0a2e7f;
+    background-color: #fff;
+    border: 1px solid rgba(10, 46, 127, 0.15);
+    border-top: 4px solid #f4ab19;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(10, 46, 127, 0.12);
 }
 
 .flex-container {
