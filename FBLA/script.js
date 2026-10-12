@@ -25,3 +25,6 @@ const photos = [
     "assets/State2025_5.jpg"
 ]
 
+const photo1 = document.getElementById("photo1");
+const photo2 = document.getElementById("photo2");
+const photo3 = document.getElementById("photo3");
