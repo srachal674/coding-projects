@@ -87,3 +87,20 @@ body {
     display: flex;
     gap: var(--bs-carousel-items-gap);
 }
+
+/* Two overlapping pictures in each stationary frame */
+#carouselStacked .photo-frame {
+    display: grid;
+}
+
+#carouselStacked .photo-frame img {
+    grid-area: 1 / 1;
+    width: 100%;
+    min-width: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#carouselStacked .photo-frame img.is-visible {
+    opacity: 1;
+}

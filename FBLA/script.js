@@ -25,23 +25,88 @@ const photos = [
     "assets/State2025_5.jpg"
 ]
 
-const photoContainer =document.getElementById("carouselStacked");
-
-// Remove the three existing placeholders.
+const photoContainer = document.getElementById("carouselStacked");
 photoContainer.replaceChildren();
-photos.forEach((filename, index) => {
-    const slide =document.createElement("div");
-    slide.className = "carousel-item";
 
-    if (index === 0) {
-        slide.classList.add("active");
+const frames = [];
+let changingPhotos = false;
+let firstChange = true;
+
+// Make three frames, each containing two overlapping images.
+for (let i = 0; i < 3; i++) {
+    const frame = document.createElement("div");
+    frame.className = "carousel-item photo-frame";
+
+    const layers = [];
+
+    for (let j = 0; j < 2; j++) {
+        const image = document.createElement("img");
+        image.alt = "FBLA chapter photo";
+        image.className = "d-block w-100 rounded-5";
+
+        frame.appendChild(image);
+        layers.push(image);
     }
 
-    const image = document.createElement("img");
-    image.src = filename;
-    image.alt = "FBLA chapter photl";
-    image.className = "d-block w-100 rounded-5";
+    photoContainer.appendChild(frame);
+    frames.push({ layers, visibleLayer: 0 });
+}
 
-    slide.appendChild(image);
-    photoContainer.appendChild(slide);
-});
+async function changePhotos() {
+    if (changingPhotos) return;
+    changingPhotos = true;
+
+    try {
+        // Avoid immediately repeating the pictures currently showing.
+        const currentSources = frames.map(
+            (frame) => frame.layers[frame.visibleLayer].getAttribute("src")
+        );
+
+        const available = photos.filter(
+            (filename) => !currentSources.includes(filename)
+        );
+
+        // Load the incoming pictures on the hidden layers.
+        const incoming = frames.map((frame) => {
+            const index = Math.floor(Math.random() * available.length);
+            const filename = available.splice(index, 1)[0];
+            const nextLayer = firstChange ? 0 : 1 - frame.visibleLayer;
+            const image = frame.layers[nextLayer];
+
+            image.src = filename;
+            return { frame, nextLayer, image };
+        });
+
+        await Promise.all(incoming.map(({ image }) => image.decode()));
+
+        // Let the browser paint the hidden layers before fading.
+        await new Promise((resolve) => {
+            requestAnimationFrame(() => requestAnimationFrame(resolve));
+        });
+
+        // Fade both layers simultaneously.
+        incoming.forEach(({ frame, nextLayer, image }) => {
+            frame.layers[frame.visibleLayer].classList.remove("is-visible");
+            image.classList.add("is-visible");
+            frame.visibleLayer = nextLayer;
+        });
+
+        firstChange = false;
+        await new Promise((resolve) => setTimeout(resolve, 800));
+    } catch (error) {
+        console.error("Could not load the next photos:", error);
+    } finally {
+        changingPhotos = false;
+    }
+}
+
+// Buttons choose another random set without sliding.
+document.querySelectorAll("#carouselMultiple .btn-icon")
+    .forEach((button) => {
+        button.removeAttribute("data-bs-slide");
+        button.removeAttribute("data-bs-target");
+        button.addEventListener("click", changePhotos);
+    });
+
+changePhotos();
+setInterval(changePhotos, 5000);
