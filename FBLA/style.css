@@ -66,10 +66,9 @@ body {
 }
 
 /* Carousel Styling */
-.flex-container #carouselStacked {
-    width: calc(100% - 32px);
-    padding: 25px;
-    margin: 100px;
+#carouselStacked {
+    display: flex;
+    margin: 0 30px;
 }
 
 #carouselStacked .btn-icon {
