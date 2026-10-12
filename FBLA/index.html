@@ -20,7 +20,7 @@
     <div class="card">
         <div class="flex-container">
             <h1>ISAZVA Chapter Hub</h1>
-            <img src="assets/FBLA.jpg" alt="FBLA Logo" width="8%">
+            <img src="assets/FBLA.jpg" alt="FBLA Logo" width="5%">
         </div>
     </div>
 
@@ -56,28 +56,13 @@
 
     <div class="d-flex flex-row flex-wrap gap-3 mb-3 hub-columns">
         <div class="p-3 hub-column"><h2>Dates to Remember</h2>
-            <ul>
-                <li>What: Chapter Meeting<br>
-                    When: Friday October 16, 2026 @ 12:15 pm<br>
-                    Where: Class Connect
-                </li>
-                <hr>
-                <li>What: Chapter Meeting<br>
-                    When: Friday October 23, 2026 @ 12:15 pm<br>
-                    Where: Class Connect
-                </li>
-                <hr>
-                <li>What: Chapter Meeting<br>
-                    When: Friday October 30, 2026 @ 12:15 pm<br>
-                    Where: Class Connect
-                </li>
-                <hr>
-            </ul>
+            <div id="calendar"></div>
         </div>
-        <div class="p-3 hub-column"><h2>Placeholder</div>
+        <div class="p-3 hub-column"><h2>Placeholder</h2></div>
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
     <script src="script.js">
         document.getElementById("photo1").src = photos[0];
         document.getElementById("photo2").src = photos[5];

@@ -81,6 +81,31 @@ body {
     background-color: #f4ab19;
 }
 
+/* Calendar theme: blue and gold */
+#calendar {
+    --fc-button-bg-color: #0a2e7f;
+    --fc-button-border-color: #0a2e7f;
+    --fc-button-hover-bg-color: #1d52bc;
+    --fc-button-hover-border-color: #1d52bc;
+    --fc-button-active-bg-color: #1d52bc;
+    --fc-button-active-border-color: #1d52bc;
+    --fc-today-bg-color: rgba(244, 171, 25, 0.18);
+    --fc-event-bg-color: #0a2e7f;
+    --fc-event-border-color: #0a2e7f;
+    --fc-border-color: rgba(10, 46, 127, 0.2);
+    font-size: 0.9rem;
+}
+
+#calendar .fc-toolbar-title {
+    font-size: 1.2rem;
+    color: #0a2e7f;
+}
+
+#calendar a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Title box*/
 .flex-container {
     display: flex;
@@ -93,6 +118,7 @@ body {
 .flex-container img {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
     border-radius: 2px;
+   margin-bottom: 6px;
 }
 
 /* Whole carousel: space from screen edges */
