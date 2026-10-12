@@ -16,6 +16,13 @@
     font-style: normal;
 }
 
+hr {
+    border: 2px;
+    height: 2px;
+    background-color: rgba(244, 171, 25, 1);
+    margin: 30px 30px;
+}
+
 h1 {
     font-family: "Manjari", sans-serif;
     font-weight: 200;
