@@ -84,15 +84,22 @@ async function changePhotos() {
             requestAnimationFrame(() => requestAnimationFrame(resolve));
         });
 
-        // Fade both layers simultaneously.
-        incoming.forEach(({ frame, nextLayer, image }) => {
-            frame.layers[frame.visibleLayer].classList.remove("is-visible");
-            image.classList.add("is-visible");
-            frame.visibleLayer = nextLayer;
-        });
+        // Change each column at a random time, so the order is random too.
+        await Promise.all(
+            incoming.map(async ({ frame, nextLayer, image }) => {
+                const delay = firstChange ? 0 : Math.random() * 3000;
+
+                await new Promise((resolve) => setTimeout(resolve, delay));
+
+                frame.layers[frame.visibleLayer].classList.remove("is-visible");
+                image.classList.add("is-visible");
+                frame.visibleLayer = nextLayer;
+
+                await new Promise((resolve) => setTimeout(resolve, 1200));
+            })
+        );
 
         firstChange = false;
-        await new Promise((resolve) => setTimeout(resolve, 800));
     } catch (error) {
         console.error("Could not load the next photos:", error);
     } finally {

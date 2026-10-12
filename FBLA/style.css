@@ -74,7 +74,7 @@ body {
     background-color: #f4ab19;
     color: #0a2e7f;
     
-    --carousel-fade-duration: .6s,
+    --carousel-fade-duration: 1.2s;
 }
 
 #carouselMultiple .carousel-item img {
@@ -98,7 +98,7 @@ body {
     width: 100%;
     min-width: 0;
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #carouselStacked .photo-frame img.is-visible {
