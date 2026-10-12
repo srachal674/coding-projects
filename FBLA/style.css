@@ -19,7 +19,7 @@
 hr {
     border: 2px;
     height: 2px;
-    background-color: rgba(244, 171, 25, 1);
+    background-color: rgba(29, 82, 188, 1);
     margin: 30px 30px;
 }
 
@@ -32,6 +32,11 @@ h1 {
     /* Shadow behind the letters */
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.35),
         4px 4px 4px rgba(0, 0, 0, 0.45);
+}
+
+h2 {
+    font-family: "Manjari", sans-serif;
+    font-weight: 400;
 }
 
 .card {
@@ -72,6 +77,11 @@ body {
     box-shadow: 0 4px 12px rgba(10, 46, 127, 0.12);
 }
 
+.hub-column hr {
+    background-color: #f4ab19;
+}
+
+/* Title box*/
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -126,3 +136,5 @@ body {
 #carouselStacked .photo-frame img.is-visible {
     opacity: 1;
 }
+
+ 
