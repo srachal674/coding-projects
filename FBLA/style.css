@@ -79,7 +79,7 @@ body {
     --bs-carousel-fade-duration: 5s;
 }
 
-#carouselMultiple .carousel-item {
+#carouselStacked .carousel-item {
     background-color: #0a2e7f;
 }
 
