@@ -25,111 +25,37 @@
     </div>
 
     <!-- Carousel of Chapter Photos and Announcements -->
-    <div id="carouselStacked" class="carousel carousel-fade" data-bs-autoplay="true" data-bs-interval="5000">
+    <div id="carouselMultiple" class="carousel slide" data-bs-ends="stop"
+        style="--bs-carousel-items: 3; --bs-carousel-items-gap: 1rem;">
         <div class="d-flex justify-content-between align-items-center">
-            <h5 class="mb-0"></h5>
+            <h5 class="mb-0">Three at a time</h5>
             <div>
-                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStacked" data-bs-slide="prev">
+                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselMultiple" data-bs-slide="prev"
+                    style="--bs-carousel-control-icon-width: 1rem;">
                     <span class="carousel-icon-prev" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStacked" data-bs-slide="next">
+                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselMultiple" data-bs-slide="next"
+                    style="--bs-carousel-control-icon-width: 1rem;">
                     <span class="carousel-icon-next" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </div>
-        <div class="carousel-inner rounded-5">
-            <div class="carousel-item active">
-                <img src="assets/FOF2024_1.jpg" class="d-block w-100" alt="FBLA On Fire 2024 Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/FOF2024_2.jpg" class="d-block w-100" alt="FBLA On Fire 2024 Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Graduation2026_1.jpg" class="d-block w-100" alt="FBLA Graduates 2026 Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Graduation2026_2.jpg" class="d-block w-100" alt="FBLA Graduates 2026 Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_2.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_3.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 3">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_4.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 4">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_5.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 5">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_6.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 6">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_7.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 7">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_8.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 8">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/NLC2025_9.jpg" class="d-block w-100"
-                    alt="National Leadership Conference 2025 Image 9">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_1.jpg" class="d-block w-100" alt="Regionals 2026 Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_2.jpg" class="d-block w-100" alt="Regionals 2026 Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_3.jpg" class="d-block w-100" alt="Regionals 2026 Image 3">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_4.jpg" class="d-block w-100" alt="Regionals 2026 Image 4">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_5.jpg" class="d-block w-100" alt="Regionals 2026 Image 5">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_6.jpg" class="d-block w-100" alt="Regionals 2026 Image 6">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_7.jpg" class="d-block w-100" alt="Regionals 2026 Image 7">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Regionals2026_8.jpg" class="d-block w-100" alt="Regionals 2026 Image 8">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/State2025_1.jpg" class="d-block w-100" alt="State 2025 Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/State2025_3.jpg" class="d-block w-100" alt="State 2025 Image 3">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/State2025_4.jpg" class="d-block w-100" alt="State 2025 Image 4">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/State2025_5.jpg" class="d-block w-100" alt="State 2025 Image 5">
+
+        <!-- Randon Image carousel of FBLA images-->
+
+        <div class="carousel-item">
+            <div class="carousel-inner" id="carouselStacked">
+                <div class="carousel-item active"><img id="photo1" src="" alt="FBLA chapter photo" class="d-block w-100 rounded-5"></div>
+                <div class="carousel-item"><img id="photo2" src="" alt="FBLA chapter photo" class="d-block w-100 rounded-5"></div>
+                <div class="carousel-item"><img id="photo3" src="" alt="FBLA chapter photo" class="d-block w-100 rounded-5"></div>
             </div>
         </div>
     </div>
 
-    
-
-
     <script>
-        <img id="photo1" src="" alt="FBLA chapter photo">
-        <img id="photo2" src="" alt="FBLA chapter photo">
-        <img id="photo3" src="" alt="FBLA chapter photo">
+                      
     </script>
 </body>
 
