@@ -66,22 +66,23 @@ body {
 }
 
 /* Carousel Styling */
-#carouselStacked {
+#carouselMultiple {
     display: flex;
+    width: calc(100% - 60px);
     margin: 0 30px;
 }
 
-#carouselStacked .btn-icon {
+#carouselMultiple .btn-icon {
     background-color: #f4ab19;
     color: #0a2e7f;
     --bs-carousel-fade-duration: 5s;
 }
 
-#carouselStacked .carousel-item {
+#carouselMultiple .carousel-item {
     background-color: #0a2e7f;
 }
 
-#carouselStacked .carousel-item img {
+#carouselMultiple .carousel-item img {
     height: clamp(220px, 45vw, 360px);
     object-fit: contain;
 }
