@@ -68,7 +68,6 @@ body {
 /* Carousel Styling */
 /* Whole carousel: space from screen edges */
 #carouselMultiple {
-    display: flex;
     width: calc(100% - 60px);
     margin: 0 30px;
 }
