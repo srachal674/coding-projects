@@ -73,12 +73,6 @@ body {
     margin: 0 30px;
 }
 
-/* Arrange the three photos and add space between them */
-#carouselStacked {
-    display: flex;
-    gap: var(--bs-carousel-items-gap);
-}
-
 /* Previous and Next buttons: gold with blue arrows */
 #carouselMultiple .btn-icon {
     background-color: #f4ab19;
@@ -93,4 +87,10 @@ body {
 #carouselMultiple .carousel-item img {
     height: clamp(220px, 45vw, 360px);
     object-fit: contain;
+}
+
+/* Arrange the three photos and add space between them */
+#carouselStacked {
+    display: flex;
+    gap: var(--bs-carousel-items-gap);
 }
