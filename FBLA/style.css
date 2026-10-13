@@ -81,6 +81,12 @@ body {
     background-color: #f4ab19;
 }
 
+.hub-column .btn-primary:hover {
+    background-color: #f4ab19;
+    border-color: #f4ab19;
+    color: #0a2e7f;
+}
+
 /* Calendar theme: blue and gold */
 #calendar {
     --fc-button-bg-color: #0a2e7f;
