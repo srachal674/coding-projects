@@ -25,8 +25,7 @@
     </div>
 
     <!-- Carousel of Chapter Photos and Announcements -->
-    <div id="carouselMultiple" class="carousel slide" data-bs-autoplay="true" data-bs-interval="5000"
-        style="--bs-carousel-items: 3; --bs-carousel-items-gap: 1rem;">
+    <div id="carouselMultiple" class="carousel slide" style="--bs-carousel-items: 3; --bs-carousel-items-gap: 1rem;">
         <div class="d-flex justify-content-between align-items-center">
             <div>
                 <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselMultiple" data-bs-slide="prev"
@@ -55,18 +54,18 @@
     <hr>
 
     <div class="d-flex flex-row flex-wrap gap-3 mb-3 hub-columns">
-        <div class="p-3 hub-column"><h2>Dates to Remember</h2>
+        <div class="p-3 hub-column">
+            <h2>Dates to Remember</h2>
             <div id="calendar"></div>
         </div>
-        <div class="p-3 hub-column"><h2>Placeholder</h2></div>
+        <div class="p-3 hub-column">
+            <h2>Placeholder</h2>
+        </div>
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
     <script src="script.js">
-        document.getElementById("photo1").src = photos[0];
-        document.getElementById("photo2").src = photos[5];
-        document.getElementById("photo3").src = photos[18];
     </script>
 </body>
 
