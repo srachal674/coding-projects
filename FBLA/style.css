@@ -67,7 +67,6 @@ body {
 }
 
 .hub-column {
-    flex: 1 1 240px;
     min-height: 160px;
     color: #333;
     background-color: #fff;
@@ -75,6 +74,14 @@ body {
     border-top: 4px solid #f4ab19;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(10, 46, 127, 0.12);
+}
+
+.calendar-column {
+    flex: 4 1 520px;
+}
+
+.announcements-column {
+    flex: 1 1 220px;
 }
 
 .hub-column h2,
