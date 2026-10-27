@@ -2,7 +2,7 @@ from turtle import*
 
 speed(0)
 colors = ["blue","purple","red","orange","yellow","green"]
-bgcolor("black")
+bgcolor("light gray")
 for i in range(200):
     #Sets the pen color to rotate between the colors in the array through the loop iterations
     pencolor(colors[i%6])
