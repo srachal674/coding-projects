@@ -77,11 +77,7 @@ body {
 }
 
 .calendar-column {
-    flex: 4 1 520px;
-}
-
-.announcements-column {
-    flex: 1 1 220px;
+    width: 100%;
 }
 
 .hub-column h2,
@@ -93,10 +89,42 @@ body {
     background-color: #f4ab19;
 }
 
-.hub-column .btn-primary:hover {
-    background-color: #f4ab19;
-    border-color: #f4ab19;
+/* Compact announcements button above the calendar */
+.announcement-bar {
+    margin: 0 30px 16px;
+}
+
+.announcement-button {
+    width: 100%;
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: #0a2e7f;
+    background-color: #fff;
+    border: 2px solid #f4ab19;
+    border-radius: 10px;
+}
+
+.announcement-button:hover,
+.announcement-button:focus {
+    color: #0a2e7f;
+    background-color: rgba(244, 171, 25, 0.16);
+    border-color: #f4ab19;
+}
+
+.modal-content {
+    color: #333;
+    border-top: 4px solid #f4ab19;
+}
+
+.modal-title {
+    color: #0a2e7f;
+}
+
+.modal-body hr {
+    background-color: #f4ab19;
+    margin: 20px 0;
 }
 
 /* Calendar theme: blue and gold */
