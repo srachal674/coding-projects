@@ -69,12 +69,17 @@ body {
 .hub-column {
     flex: 1 1 240px;
     min-height: 160px;
-    color: #0a2e7f;
+    color: #333;
     background-color: #fff;
     border: 1px solid rgba(10, 46, 127, 0.15);
     border-top: 4px solid #f4ab19;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(10, 46, 127, 0.12);
+}
+
+.hub-column h2,
+.hub-column h3 {
+    color: #0a2e7f;
 }
 
 .hub-column hr {
