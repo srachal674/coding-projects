@@ -122,6 +122,7 @@ setInterval(changePhotos, 5000);
 const calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
     initialView: "dayGridMonth",
     initialDate: "2026-10-01",
+    weekends: false,
     height: "auto",
     fixedWeekCount: false,
     eventDisplay: "block",
