@@ -118,17 +118,6 @@ document.querySelectorAll("#carouselMultiple .btn-icon")
 changePhotos();
 setInterval(changePhotos, 5000);
 
-// Open the announcements modal using the same Bootstrap pattern as Project Finder.
-const announcementButton = document.getElementById("openAnnouncements");
-
-announcementButton.addEventListener("click", () => {
-    const modal = new bootstrap.Modal(
-        document.getElementById("announcementsModal")
-    );
-
-    modal.show();
-});
-
 // Chapter calendar
 const calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
     initialView: "dayGridMonth",
