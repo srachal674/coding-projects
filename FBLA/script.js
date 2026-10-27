@@ -131,11 +131,18 @@ const calendar = new FullCalendar.Calendar(document.getElementById("calendar"), 
     events: [
         { title: "Chapter Meeting", start: "2026-10-16T12:15:00", extendedProps: { location: "Class Connect" } },
         { title: "Chapter Meeting", start: "2026-10-23T12:15:00", extendedProps: { location: "Class Connect" } },
-        { title: "Chapter Meeting", start: "2026-10-30T12:15:00", extendedProps: { location: "Class Connect" } }
+        { title: "Red Zone Sign-Up Survey Due", start: "2026-10-29T17:00:00", extendedProps: { location: "Online" } },
+        { title: "Chapter Meeting", start: "2026-10-30T12:15:00", extendedProps: { location: "Class Connect" } },
+        { title: "FBLA Red Zone Leadership Conference", start: "2026-11-13", allDay: true, extendedProps: { location: "Red Zone Leadership Conference" } },
+        { title: "Cardinals vs. Rams - Red Zone", start: "2026-11-15", allDay: true, extendedProps: { location: "Red Zone Leadership Conference" } }
     ],
     eventDidMount: (info) => {
-        const time = info.event.start.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-        info.el.title = `${info.event.title} at ${time} - ${info.event.extendedProps.location}`;
+        if (info.event.allDay) {
+            info.el.title = `${info.event.title} - ${info.event.extendedProps.location}`;
+        } else {
+            const time = info.event.start.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+            info.el.title = `${info.event.title} at ${time} - ${info.event.extendedProps.location}`;
+        }
     }
 });
 calendar.render();
