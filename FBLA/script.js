@@ -117,32 +117,3 @@ document.querySelectorAll("#carouselMultiple .btn-icon")
 
 changePhotos();
 setInterval(changePhotos, 5000);
-
-// Chapter calendar
-const calendar = new FullCalendar.Calendar(document.getElementById("calendar"), {
-    initialView: "dayGridMonth",
-    initialDate: "2026-10-01",
-    weekends: false,
-    height: "auto",
-    fixedWeekCount: false,
-    eventDisplay: "block",
-    displayEventTime: false,
-    headerToolbar: { left: "prev,next", center: "title", right: "today" },
-    eventTimeFormat: { hour: "numeric", minute: "2-digit", meridiem: "short" },
-    events: [
-        { title: "Chapter Meeting", start: "2026-10-16T12:15:00", extendedProps: { location: "Class Connect" } },
-        { title: "Chapter Meeting", start: "2026-10-23T12:15:00", extendedProps: { location: "Class Connect" } },
-        { title: "Chapter Meeting", start: "2026-11-06T12:15:00", extendedProps: { location: "Class Connect" } },
-        { title: "FBLA Red Zone Leadership Conference", start: "2026-11-13", allDay: true, extendedProps: { location: "Red Zone Leadership Conference" } },
-        { title: "Cardinals vs. Rams - Red Zone", start: "2026-11-15", allDay: true, extendedProps: { location: "Red Zone Leadership Conference" } }
-    ],
-    eventDidMount: (info) => {
-        if (info.event.allDay) {
-            info.el.title = `${info.event.title} - ${info.event.extendedProps.location}`;
-        } else {
-            const time = info.event.start.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-            info.el.title = `${info.event.title} at ${time} - ${info.event.extendedProps.location}`;
-        }
-    }
-});
-calendar.render();
